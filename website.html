@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NexGroup – NexOS</title>
+  <meta name="description" content="NexOS – das schnelle, sichere, moderne Linux-basierte Betriebssystem von NexGroup. Lade die neueste ISO herunter und starte direkt los." />
+  <meta property="og:title" content="NexGroup – NexOS" />
+  <meta property="og:description" content="Lade NexOS herunter – schnell, sicher, modern." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#2563eb" />
+  <link rel="icon" href="/favicon.ico" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ["Inter", "ui-sans-serif", "system-ui", "Segoe UI", "Roboto", "Helvetica", "Arial", "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji"],
+          },
+          boxShadow: {
+            soft: "0 10px 25px -10px rgba(0,0,0,0.15)",
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="font-sans bg-gray-50 text-gray-800">
+  <!-- Top Bar -->
+  <div class="bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 text-white">
+    <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between text-sm">
+      <p class="opacity-90">NexOS 1.0 – Stabil | Jetzt verfügbar</p>
+      <a class="underline underline-offset-4 hover:opacity-90" href="#download">Direkt zum Download</a>
+    </div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="bg-white/80 backdrop-blur sticky top-0 z-40 border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-center justify-between h-16">
+        <a href="#" class="flex items-center gap-2">
+          <svg width="28" height="28" viewBox="0 0 24 24" class="text-blue-600"><path fill="currentColor" d="M3 3h8v8H3zM13 3h8v8h-8zM3 13h8v8H3zM13 13h8v8h-8z"/></svg>
+          <span class="text-xl font-bold tracking-tight">NexGroup</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="#features" class="hover:text-blue-600">Features</a>
+          <a href="#screenshots" class="hover:text-blue-600">Screenshots</a>
+          <a href="#download" class="hover:text-blue-600">Download</a>
+          <a href="#support" class="hover:text-blue-600">Support</a>
+        </nav>
+        <div class="md:hidden">
+          <button id="menuBtn" class="p-2 rounded-lg hover:bg-gray-100" aria-label="Menü öffnen">
+            <svg class="h-6 w-6" viewBox="0 0 24 24"><path fill="currentColor" d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+          </button>
+        </div>
+      </div>
+      <div id="mobileMenu" class="hidden md:hidden py-2 border-t border-gray-100">
+        <a href="#features" class="block py-2">Features</a>
+        <a href="#screenshots" class="block py-2">Screenshots</a>
+        <a href="#download" class="block py-2">Download</a>
+        <a href="#support" class="block py-2">Support</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 pointer-events-none select-none" aria-hidden="true">
+      <div class="h-56 bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 blur-3xl opacity-20"></div>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 py-16 md:py-24">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">NexOS
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">— schnell, sicher, modern.</span>
+          </h1>
+          <p class="mt-5 text-lg text-gray-600">Ein Linux-basiertes Betriebssystem, das Performance und Eleganz vereint. Optimiert für moderne Hardware und angenehmes Arbeiten – von Entwicklern für alle.</p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#download" class="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-blue-600 text-white font-semibold shadow-soft hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">📥 Jetzt herunterladen</a>
+            <a href="#features" class="inline-flex items-center justify-center px-6 py-3 rounded-xl border border-gray-300 font-semibold hover:bg-gray-100">Mehr erfahren</a>
+          </div>
+          <div class="mt-6 flex items-center gap-4 text-sm text-gray-500">
+            <div class="flex items-center gap-2"><span class="inline-block h-2 w-2 rounded-full bg-green-500"></span> LTS-Support</div>
+            <div>ISO • x86_64 • ~2.1 GB</div>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="aspect-video rounded-2xl bg-white shadow-soft border border-gray-100 overflow-hidden">
+            <div class="h-full w-full grid place-content-center text-center p-6">
+              <div>
+                <div class="text-7xl">🧊</div>
+                <p class="mt-4 text-xl font-semibold">NexOS Desktop</p>
+                <p class="text-gray-500">Klar. Schnell. Aufgeräumt.</p>
+              </div>
+            </div>
+          </div>
+          <div class="absolute -bottom-4 -left-4 hidden md:block">
+            <div class="px-4 py-2 bg-white/90 border border-gray-200 rounded-xl shadow-soft text-sm">✔️ Verifiziertes Image</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="max-w-7xl mx-auto px-4 py-16">
+    <h2 class="text-3xl md:text-4xl font-bold text-center">Warum NexOS?</h2>
+    <p class="text-center text-gray-600 mt-3 max-w-2xl mx-auto">Schnellstart, moderne Sicherheit und ein UI, das inspiriert. Alles, was du brauchst – ohne Ballast.</p>
+    <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-soft">
+        <h3 class="font-semibold text-lg mb-2">🚀 Performance</h3>
+        <p class="text-gray-600">Optimiert für kurze Bootzeiten und geringe RAM-Nutzung – ideal für Laptops und Workstations.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-soft">
+        <h3 class="font-semibold text-lg mb-2">🔒 Sicherheit</h3>
+        <p class="text-gray-600">Harte Defaults, regelmäßige Updates, sichere Repos. Deine Daten gehören dir.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-soft">
+        <h3 class="font-semibold text-lg mb-2">🎨 UI & UX</h3>
+        <p class="text-gray-600">Klares, produktives Desktop-Design – angelehnt an moderne Enterprise-Standards.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-soft">
+        <h3 class="font-semibold text-lg mb-2">🧩 Kompatibilität</h3>
+        <p class="text-gray-600">Große Hardware-Unterstützung, Flatpak/AppImage/DEB – arbeite so, wie du willst.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-soft">
+        <h3 class="font-semibold text-lg mb-2">⚡ Entwicklerfreundlich</h3>
+        <p class="text-gray-600">Toolchains & Container-first Workflows out of the box – produktiv ab Tag eins.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-soft">
+        <h3 class="font-semibold text-lg mb-2">♻️ Updates</h3>
+        <p class="text-gray-600">Stabile Releases mit LTS-Zyklus und optionalen Early-Access-Builds.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screenshots / Gallery placeholder -->
+  <section id="screenshots" class="bg-white">
+    <div class="max-w-7xl mx-auto px-4 py-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-center">Ein Blick auf NexOS</h2>
+      <p class="text-center text-gray-600 mt-3 max-w-2xl mx-auto">Erlebe einen aufgeräumten Desktop, produktive Workflows und konsistente Komponenten.</p>
+      <div class="mt-10 grid md:grid-cols-3 gap-6">
+        <div class="aspect-video bg-gray-100 rounded-xl border border-gray-200 grid place-content-center">Screenshot 1</div>
+        <div class="aspect-video bg-gray-100 rounded-xl border border-gray-200 grid place-content-center">Screenshot 2</div>
+        <div class="aspect-video bg-gray-100 rounded-xl border border-gray-200 grid place-content-center">Screenshot 3</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download -->
+  <section id="download" class="bg-gradient-to-br from-blue-50 to-indigo-50">
+    <div class="max-w-7xl mx-auto px-4 py-16">
+      <div class="grid lg:grid-cols-2 gap-8 items-start">
+        <div class="bg-white rounded-2xl border border-gray-100 p-6 md:p-8 shadow-soft">
+          <h2 class="text-2xl md:text-3xl font-bold">NexOS herunterladen</h2>
+          <p class="mt-2 text-gray-600">Neueste stabile Version • x86_64 • ISO-Image</p>
+          <div class="mt-6">
+            <a href="/downloads/nexos-1.0-stable-x86_64.iso" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-blue-600 text-white font-semibold hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">📥 Download .ISO</a>
+            <a href="/downloads/sha256sums.txt" class="ml-3 inline-flex items-center px-4 py-3 rounded-xl border border-gray-300 font-medium hover:bg-gray-100">SHA256</a>
+          </div>
+          <ul class="mt-6 text-sm text-gray-600 space-y-2">
+            <li>• Größe: ~2.1 GB</li>
+            <li>• Prüfsumme (SHA256): <code class="bg-gray-100 rounded px-1">abc123…</code></li>
+            <li>• Veröffentlicht: 2025‑08‑01</li>
+          </ul>
+          <details class="mt-6 bg-gray-50 border border-gray-200 rounded-xl p-4">
+            <summary class="font-semibold">Systemanforderungen</summary>
+            <ul class="mt-3 list-disc pl-5 text-gray-600 text-sm space-y-1">
+              <li>CPU: x86_64, 2 Kerne</li>
+              <li>RAM: 4 GB (8 GB empfohlen)</li>
+              <li>Speicher: 20 GB frei</li>
+              <li>UEFI mit Secure Boot optional</li>
+              <li>Internet für Updates</li>
+            </ul>
+          </details>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-100 p-6 md:p-8 shadow-soft">
+          <h3 class="text-xl md:text-2xl font-bold">Installationshilfe</h3>
+          <ol class="mt-4 space-y-3 text-gray-700">
+            <li><strong>USB-Stick erstellen:</strong> Mit BalenaEtcher oder Rufus die ISO auf einen ≥8 GB USB-Stick schreiben.</li>
+            <li><strong>Booten:</strong> Von USB starten, Installationsassistent folgen.</li>
+            <li><strong>Nach der Installation:</strong> Updates ausführen und optional proprietäre Treiber aktivieren.</li>
+          </ol>
+          <div class="mt-6 text-sm text-gray-600">
+            Tipp: Prüfe die SHA256-Prüfsumme, um die Integrität des Downloads zu bestätigen.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Support / Community -->
+  <section id="support" class="max-w-7xl mx-auto px-4 py-16">
+    <div class="grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h2 class="text-3xl md:text-4xl font-bold">Support & Community</h2>
+        <p class="mt-3 text-gray-600">Fragen, Ideen, Feedback? Werde Teil der NexGroup‑Community und erhalte schnelle Hilfe sowie aktuelle Infos zu Releases.</p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="https://discord.gg/KpMU3uVhEy" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-indigo-600 text-white font-semibold hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">💬 Discord beitreten</a>
+          <a href="mailto:support@nexgroup.example" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-gray-300 font-semibold hover:bg-gray-100">E‑Mail Support</a>
+        </div>
+      </div>
+      <div class="bg-white rounded-2xl border border-gray-100 p-6 shadow-soft">
+        <h3 class="text-lg font-semibold">FAQ</h3>
+        <div class="mt-4 divide-y divide-gray-200">
+          <details class="py-3">
+            <summary class="font-medium">Ist NexOS kostenlos?</summary>
+            <p class="mt-2 text-gray-600">Ja. NexOS ist kostenlos nutzbar. Bitte beachte die Lizenzhinweise im Projekt.</p>
+          </details>
+          <details class="py-3">
+            <summary class="font-medium">Wie erhalte ich Updates?</summary>
+            <p class="mt-2 text-gray-600">Über den integrierten Aktualisierer oder per Paketmanager. LTS‑Patches werden regelmäßig bereitgestellt.</p>
+          </details>
+          <details class="py-3">
+            <summary class="font-medium">Gibt es eine Live‑Session?</summary>
+            <p class="mt-2 text-gray-600">Ja, die ISO kann als Live‑System gestartet werden, bevor du installierst.</p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-gray-200 bg-white">
+    <div class="max-w-7xl mx-auto px-4 py-10 grid md:grid-cols-4 gap-8 text-sm">
+      <div>
+        <div class="flex items-center gap-2">
+          <svg width="20" height="20" viewBox="0 0 24 24" class="text-blue-600"><path fill="currentColor" d="M3 3h8v8H3zM13 3h8v8h-8zM3 13h8v8H3zM13 13h8v8h-8z"/></svg>
+          <span class="font-semibold">NexGroup</span>
+        </div>
+        <p class="mt-3 text-gray-600">© 2025 NexGroup. Alle Rechte vorbehalten.</p>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-2">Produkt</h4>
+        <ul class="space-y-1 text-gray-600">
+          <li><a class="hover:text-blue-600" href="#features">Features</a></li>
+          <li><a class="hover:text-blue-600" href="#screenshots">Screenshots</a></li>
+          <li><a class="hover:text-blue-600" href="#download">Download</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-2">Ressourcen</h4>
+        <ul class="space-y-1 text-gray-600">
+          <li><a class="hover:text-blue-600" href="/docs/getting-started.html">Docs</a></li>
+          <li><a class="hover:text-blue-600" href="/blog/">Blog</a></li>
+          <li><a class="hover:text-blue-600" href="/legal/privacy.html">Datenschutz</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-2">Community</h4>
+        <ul class="space-y-1 text-gray-600">
+          <li><a class="hover:text-blue-600" href="https://discord.gg/KpMU3uVhEy">Discord</a></li>
+          <li><a class="hover:text-blue-600" href="mailto:support@nexgroup.example">E‑Mail</a></li>
+          <li><a class="hover:text-blue-600" href="#">Status</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile Nav
+    const btn = document.getElementById('menuBtn');
+    const menu = document.getElementById('mobileMenu');
+    btn?.addEventListener('click', () => menu.classList.toggle('hidden'));
+  </script>
+</body>
+</html>
