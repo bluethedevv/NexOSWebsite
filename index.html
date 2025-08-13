@@ -8,19 +8,31 @@
   <link rel="icon" href="/assets/nexos-icon.png" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    // Dark Mode Toggle (Auto basierend auf System, mit Option)
+    // Dark Mode Auto
     if (localStorage.theme === 'dark' || 
         (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
       document.documentElement.classList.add('dark')
     } else {
       document.documentElement.classList.remove('dark')
     }
+
+    // Easter Egg: Konami Code
+    let konami = [38,38,40,40,37,39,37,39,66,65];
+    let input = [];
+    window.addEventListener("keydown", (e) => {
+      input.push(e.keyCode);
+      if (input.toString().indexOf(konami) >= 0) {
+        alert("🎉 Secret Unlocked: Du bist offiziell ein NexOS Insider!");
+        document.getElementById("secret-message").classList.remove("hidden");
+        input = [];
+      }
+    });
   </script>
 </head>
 <body class="font-sans bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-200 transition-colors duration-500">
 
   <!-- Header -->
-  <header class="bg-white dark:bg-gray-800 shadow-md transition-colors duration-500">
+  <header class="bg-white dark:bg-gray-800 shadow-md">
     <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
       <h1 class="text-2xl font-bold text-blue-600 dark:text-blue-400">NexGroup</h1>
       <nav class="space-x-6">
@@ -60,28 +72,33 @@
   </section>
 
   <!-- Download -->
-  <section id="download" class="bg-gray-100 dark:bg-gray-800 py-16 px-4 text-center transition-colors duration-500">
+  <section id="download" class="bg-gray-100 dark:bg-gray-800 py-16 px-4 text-center">
     <h3 class="text-3xl font-bold mb-6">NexOS herunterladen</h3>
     <p class="mb-8">Laden Sie die neueste Version von NexOS (.iso) herunter.</p>
     <a href="/downloads/nexos-1.0-stable-x86_64.iso" class="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transform hover:scale-105 transition-all">
       📥 Download .ISO
     </a>
-    <div class="mt-8 text-left max-w-md mx-auto bg-white dark:bg-gray-900 p-6 rounded-lg shadow">
-      <h4 class="font-bold mb-4">Systemanforderungen</h4>
-      <h5 class="font-semibold">Mindestanforderungen</h5>
-      <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 mb-4">
-        <li>RAM: mindestens 2 GB</li>
-        <li>CPU: 2 Kerne</li>
-        <li>Speicherplatz: 10 GB frei</li>
-        <li>BIOS oder UEFI</li>
-      </ul>
-      <h5 class="font-semibold">Empfohlene Anforderungen</h5>
-      <ul class="list-disc list-inside text-gray-700 dark:text-gray-300">
-        <li>RAM: 8 GB</li>
-        <li>CPU: 4 Kerne oder mehr</li>
-        <li>Speicherplatz: 50 GB frei</li>
-        <li>UEFI mit Secure Boot Unterstützung</li>
-      </ul>
+    <div class="mt-12 grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      <!-- Mindestanforderungen -->
+      <div class="bg-white dark:bg-gray-900 p-6 rounded-lg shadow hover:shadow-lg transition-all">
+        <h4 class="font-bold mb-4 text-center">📉 Mindestanforderungen</h4>
+        <ul class="list-disc list-inside text-gray-700 dark:text-gray-300">
+          <li>RAM: 2 GB</li>
+          <li>CPU: 2 Kerne</li>
+          <li>Speicher: 10 GB frei</li>
+          <li>BIOS oder UEFI</li>
+        </ul>
+      </div>
+      <!-- Empfohlene Anforderungen -->
+      <div class="bg-white dark:bg-gray-900 p-6 rounded-lg shadow hover:shadow-lg transition-all">
+        <h4 class="font-bold mb-4 text-center">📈 Empfohlene Anforderungen</h4>
+        <ul class="list-disc list-inside text-gray-700 dark:text-gray-300">
+          <li>RAM: 8 GB</li>
+          <li>CPU: 4 Kerne oder mehr</li>
+          <li>Speicher: 50 GB frei</li>
+          <li>UEFI mit Secure Boot</li>
+        </ul>
+      </div>
     </div>
   </section>
 
@@ -96,6 +113,11 @@
     </div>
   </section>
 
+  <!-- Secret Message -->
+  <div id="secret-message" class="hidden fixed bottom-5 right-5 bg-yellow-400 text-black px-4 py-2 rounded shadow-lg">
+    🔑 Du hast das geheime NexOS Easter Egg gefunden!
+  </div>
+
   <!-- Footer -->
   <footer class="bg-gray-900 text-white text-center py-6 mt-12">
     <p>&copy; 2025 NexGroup. Alle Rechte vorbehalten.</p>
@@ -103,17 +125,14 @@
 
   <!-- Animation Styles -->
   <style>
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-    @keyframes slideUp {
-      from { transform: translateY(20px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
     .animate-fadeIn { animation: fadeIn 1s ease-out; }
     .animate-slideUp { animation: slideUp 0.8s ease-out; }
     .delay-200 { animation-delay: 0.2s; }
   </style>
+
+  <!-- Hidden HTML Comment Secret -->
+  <!-- SECRET: Projekt "NexBrew" startet Q4 2025 – nix leaken 😉 -->
 </body>
 </html>
