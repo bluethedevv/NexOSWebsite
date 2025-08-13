@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" class="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -7,26 +7,36 @@
   <meta name="description" content="NexOS – das schnelle, sichere, moderne Linux-basierte Betriebssystem von NexGroup. Lade die neueste ISO herunter und starte direkt los." />
   <link rel="icon" href="/assets/nexos-icon.png" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Dark Mode Toggle (Auto basierend auf System, mit Option)
+    if (localStorage.theme === 'dark' || 
+        (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  </script>
 </head>
-<body class="font-sans bg-gray-50 text-gray-800">
+<body class="font-sans bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-200 transition-colors duration-500">
+
   <!-- Header -->
-  <header class="bg-white shadow-md">
+  <header class="bg-white dark:bg-gray-800 shadow-md transition-colors duration-500">
     <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
-      <h1 class="text-2xl font-bold text-blue-600">NexGroup</h1>
+      <h1 class="text-2xl font-bold text-blue-600 dark:text-blue-400">NexGroup</h1>
       <nav class="space-x-6">
-        <a href="#features" class="hover:text-blue-600">Features</a>
-        <a href="#download" class="hover:text-blue-600">Download</a>
-        <a href="#support" class="hover:text-blue-600">Support</a>
+        <a href="#features" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Features</a>
+        <a href="#download" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Download</a>
+        <a href="#support" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Support</a>
       </nav>
     </div>
   </header>
 
   <!-- Hero -->
-  <section class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-20">
+  <section class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-20 animate-fadeIn">
     <div class="max-w-7xl mx-auto text-center">
-      <h2 class="text-4xl font-bold mb-4">Willkommen bei NexOS</h2>
-      <p class="text-lg mb-8">Das schnelle, sichere und moderne Linux-basierte Betriebssystem von NexGroup.</p>
-      <a href="#download" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100">Jetzt herunterladen</a>
+      <h2 class="text-4xl font-bold mb-4 animate-slideUp">Willkommen bei NexOS</h2>
+      <p class="text-lg mb-8 animate-slideUp delay-200">Das schnelle, sichere und moderne Linux-basierte Betriebssystem von NexGroup.</p>
+      <a href="#download" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transform hover:scale-105 transition-all">Jetzt herunterladen</a>
     </div>
   </section>
 
@@ -34,15 +44,15 @@
   <section id="features" class="max-w-7xl mx-auto py-16 px-4">
     <h3 class="text-3xl font-bold text-center mb-12">Warum NexOS?</h3>
     <div class="grid md:grid-cols-3 gap-8">
-      <div class="bg-white shadow rounded-lg p-6 text-center">
+      <div class="bg-white dark:bg-gray-800 shadow rounded-lg p-6 text-center hover:shadow-lg transform hover:-translate-y-1 transition-all">
         <h4 class="font-bold text-lg mb-2">🚀 Geschwindigkeit</h4>
         <p>Optimiert für maximale Leistung auf moderner und älterer Hardware.</p>
       </div>
-      <div class="bg-white shadow rounded-lg p-6 text-center">
+      <div class="bg-white dark:bg-gray-800 shadow rounded-lg p-6 text-center hover:shadow-lg transform hover:-translate-y-1 transition-all">
         <h4 class="font-bold text-lg mb-2">🔒 Sicherheit</h4>
         <p>Modernste Sicherheitsfunktionen für sorgenfreies Arbeiten.</p>
       </div>
-      <div class="bg-white shadow rounded-lg p-6 text-center">
+      <div class="bg-white dark:bg-gray-800 shadow rounded-lg p-6 text-center hover:shadow-lg transform hover:-translate-y-1 transition-all">
         <h4 class="font-bold text-lg mb-2">🎨 Design</h4>
         <p>Eine elegante Benutzeroberfläche, die einfach zu bedienen ist.</p>
       </div>
@@ -50,33 +60,27 @@
   </section>
 
   <!-- Download -->
-  <section id="download" class="bg-gray-100 py-16 px-4 text-center">
+  <section id="download" class="bg-gray-100 dark:bg-gray-800 py-16 px-4 text-center transition-colors duration-500">
     <h3 class="text-3xl font-bold mb-6">NexOS herunterladen</h3>
     <p class="mb-8">Laden Sie die neueste Version von NexOS (.iso) herunter.</p>
-    <a href="/downloads/nexos-1.0-stable-x86_64.iso" class="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700">
+    <a href="/downloads/nexos-1.0-stable-x86_64.iso" class="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transform hover:scale-105 transition-all">
       📥 Download .ISO
     </a>
-    <div class="mt-8 text-left max-w-md mx-auto bg-white p-6 rounded-lg shadow">
-      <h4 class="font-bold mb-2">Systemanforderungen</h4>
-      <ul class="list-disc list-inside text-gray-700">
-        <li>RAM: mindestens 2 GB</li>
-        <li>CPU: mindestens 2 Kerne</li>
-        <li>Speicherplatz: 10 GB frei</li>
-        <li>BIOS </li>
+    <div class="mt-8 text-left max-w-md mx-auto bg-white dark:bg-gray-900 p-6 rounded-lg shadow">
+      <h4 class="font-bold mb-4">Systemanforderungen</h4>
+      <h5 class="font-semibold">Mindestanforderungen</h5>
+      <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 mb-4">
+        <li>RAM: mindestens 2 GB</li>
+        <li>CPU: 2 Kerne</li>
+        <li>Speicherplatz: 10 GB frei</li>
+        <li>BIOS oder UEFI</li>
       </ul>
-    </div>
-        <h3 class="text-3xl font-bold mb-6">NexOS herunterladen</h3>
-    <p class="mb-8">Laden Sie die neueste Version von NexOS (.iso) herunter.</p>
-    <a href="/downloads/nexos-1.0-stable-x86_64.iso" class="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700">
-      📥 Download .ISO
-    </a>
-    <div class="mt-8 text-left max-w-md mx-auto bg-white p-6 rounded-lg shadow">
-      <h4 class="font-bold mb-2">Systemanforderungen</h4>
-      <ul class="list-disc list-inside text-gray-700">
-        <li>RAM: mindestens 2 GB</li>
-        <li>CPU: mindestens 2 Kerne</li>
-        <li>Speicherplatz: 10 GB frei</li>
-        <li>BIOS </li>
+      <h5 class="font-semibold">Empfohlene Anforderungen</h5>
+      <ul class="list-disc list-inside text-gray-700 dark:text-gray-300">
+        <li>RAM: 8 GB</li>
+        <li>CPU: 4 Kerne oder mehr</li>
+        <li>Speicherplatz: 50 GB frei</li>
+        <li>UEFI mit Secure Boot Unterstützung</li>
       </ul>
     </div>
   </section>
@@ -86,7 +90,7 @@
     <h3 class="text-3xl font-bold mb-6 text-center">Support & Community</h3>
     <p class="text-center mb-8">Treten Sie unserer Community bei und finden Sie Hilfe, Tipps und Updates.</p>
     <div class="text-center">
-      <a href="https://discord.gg/KpMU3uVhEy" class="bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700">
+      <a href="https://discord.gg/KpMU3uVhEy" class="bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transform hover:scale-105 transition-all">
         💬 Discord Community
       </a>
     </div>
@@ -96,5 +100,20 @@
   <footer class="bg-gray-900 text-white text-center py-6 mt-12">
     <p>&copy; 2025 NexGroup. Alle Rechte vorbehalten.</p>
   </footer>
+
+  <!-- Animation Styles -->
+  <style>
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes slideUp {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    .animate-fadeIn { animation: fadeIn 1s ease-out; }
+    .animate-slideUp { animation: slideUp 0.8s ease-out; }
+    .delay-200 { animation-delay: 0.2s; }
+  </style>
 </body>
 </html>
